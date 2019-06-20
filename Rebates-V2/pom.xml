@@ -22,6 +22,8 @@
 		<spring-cloud.version>Dalston.SR3</spring-cloud.version>
 		<cxf.version>3.1.5</cxf.version>
 		<olingo.version>2.0.6</olingo.version>
+		<version.ngdbc>1.110.5</version.ngdbc>
+		<dbtype>hana</dbtype>
 		<!-- DB type to be used for integration testing -->
 		<eclipse.persistence>2.6.3</eclipse.persistence>
 		<javax.persistence>2.1.1</javax.persistence>
@@ -60,7 +62,7 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<scope>compile</scope>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

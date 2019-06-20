@@ -9,8 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
-//import com.walmart.rebates.JPAannotations.CustomAnnotationProcessor;
-import com.walmart.rebates.JPAannotations.JPAEdmExtension;
+import com.walmart.rebates.JPAannotations.CustomAnnotationProcessor;
 
 import org.springframework.context.annotation.Scope;
 
@@ -31,7 +30,7 @@ public class RebatesOdataServiceFactory extends ODataJPAServiceFactory{
 	public ODataJPAContext initializeODataJPAContext() throws ODataJPARuntimeException {
 		ODataJPAContext oDataJPAContext = getODataJPAContext();
 		oDataJPAContext.setEntityManagerFactory(entityManagerFactory);
-//		oDataJPAContext.setJPAEdmExtension(new CustomAnnotationProcessor());
+		oDataJPAContext.setJPAEdmExtension(new CustomAnnotationProcessor());
 		oDataJPAContext.setPersistenceUnitName(PUNIT_NAME);
 		return oDataJPAContext;
 	}
